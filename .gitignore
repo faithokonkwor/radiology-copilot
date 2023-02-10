@@ -1,0 +1,34 @@
+# dependencies
+node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# builds
+.next/
+out/
+dist/
+build/
+*.egg-info/
+
+# env
+.env
+.env.local
+.env.*.local
+
+# data
+postgres-data/
+uploads/
+models/
+*.dcm
+*.nii
+*.nii.gz
+
+# misc
+.DS_Store
+coverage/
+
+# typecheck
+*.tsbuildinfo
