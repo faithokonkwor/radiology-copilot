@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 47% 6%;
+  --foreground: 210 40% 98%;
+  --primary: 190 95% 54%;
+  --muted: 217 33% 18%;
+  --border: 217 33% 22%;
+  --card: 222 47% 9%;
+}
+
+body { background: radial-gradient(circle at top left, rgba(14,165,233,.18), transparent 32rem), hsl(var(--background)); color: hsl(var(--foreground)); }
+
+.demo-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+.dark .demo-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+@keyframes scan-float {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(10px, -8px, 0) scale(1.04); }
+}
+
+.animate-scan {
+  animation: scan-float 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scan,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
